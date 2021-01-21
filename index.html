@@ -51,7 +51,7 @@ document.getElementById("result").innerHTML += '<img src="'+ subarray[i] +'" sty
 }
 }
 
-function getRandomImage2() {
+function getRole() {
 
 var DPS = new Array();
 var tank = new Array();
@@ -107,6 +107,28 @@ for (let i=0; i< 2; i++) {
 
 }
 
+function getBALL() {
+
+var ball = new Array(); 
+
+ball[0] = "https://cdn.images.express.co.uk/img/dynamic/143/590x/Overwatch-Hammond-989281.jpg?r=1532347189766";
+ball[1] = "https://www.pcgamesn.com/wp-content/uploads/2018/07/wrecking-ball-release-date.jpg";
+ball[2] = "https://cdn1.dotesports.com/wp-content/uploads/2018/08/11084720/ed387fab-9481-4f2e-b332-a7a202b8efa1.png";
+ball[3] = "https://img.redbull.com/images/c_crop,x_600,y_0,h_2160,w_3240/c_fill,w_1500,h_1000/q_auto,f_auto/redbullcom/2018/07/23/b26cfbab-298a-4e7f-bc1e-55437f746e06/wrecking-ball-overwatch";
+ball[4] = "https://images.blz-contentstack.com/v3/assets/blt2477dcaf4ebd440c/blt9cf92a05b06fe6aa/5cf15ded72eb37ee09921f47/wrecking-ball-screenshot-001.jpg?auto=webp";
+ball[5] = "https://cdn.mos.cms.futurecdn.net/MecSfmJC9BFxTSCbFcXZdC.jpg";
+ball[6] = "https://overwatch.nosdn.127.net/1/images/minisite/storm-rising/High_Roller.jpg";
+
+document.getElementById("result5").innerHTML = "";
+var subarray = getRandomSubarray(ball, 6);
+for (let i=0; i< 6; i++) {
+
+document.getElementById("result5").innerHTML += '<img src="'+ subarray[i] +'" style="width:150px" />';
+
+}
+
+}
+
 function getRandomSubarray(arr, size) {
     var shuffled = arr.slice(0), i = arr.length, min = i - size, temp, index;
     while (i-- > min) {
@@ -126,11 +148,15 @@ function getRandomSubarray(arr, size) {
 <br> <br>
 <span id="result" align="center"> </span> 
 <h4> Click the button to generate and display the Overwatch team: </h4>
-<button onclick = "getRandomImage2()"> PRO GAMER TEAM </button>
+<button onclick = "getRole()"> PRO GAMER TEAM </button>
 <br> <br>
 <span id="result2" align="center"> </span>
 <span id="result3" align="center"> </span>
 <span id="result4" align="center"> </span>
+<h4> Click the button to generate and display the Overwatch Nixx core team: </h4>
+<button onclick = "getBALL()"> PRO GAMER TEAM BUT NIXX </button>
+<br> <br>
+<span id="result5" align="center"> </span>
 
 </body>  
 </html>

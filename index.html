@@ -42,6 +42,7 @@ randomImage[0] = "https://d1u1mce87gyfbn.cloudfront.net/hero/ana/hero-select-por
     randomImage[31] = "https://d1u1mce87gyfbn.cloudfront.net/hero/zenyatta/hero-select-portrait.png";
 
 //loop to display six randomly chosen images at once
+document.getElementById("result").innerHTML = "";
 for (let i=0; i< 6; i++) {
 //generate a number and provide to the image to generate randomly
 var number = Math.floor(Math.random()*randomImage.length);

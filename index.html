@@ -51,6 +51,62 @@ document.getElementById("result").innerHTML += '<img src="'+ subarray[i] +'" sty
 }
 }
 
+function getRandomImage2() {
+
+var DPS = new Array();
+var tank = new Array();
+var support = new Array();
+
+DPS[0] = "https://d1u1mce87gyfbn.cloudfront.net/hero/ashe/hero-select-portrait.png";
+DPS[1] = "https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/hero-select-portrait.png";
+DPS[2] = "https://d1u1mce87gyfbn.cloudfront.net/hero/doomfist/hero-select-portrait.png";
+DPS[3] = "https://d1u1mce87gyfbn.cloudfront.net/hero/echo/hero-select-portrait.png";
+DPS[4] = "https://d1u1mce87gyfbn.cloudfront.net/hero/genji/hero-select-portrait.png";
+DPS[5] = "https://d1u1mce87gyfbn.cloudfront.net/hero/hanzo/hero-select-portrait.png";
+DPS[6] = "https://d1u1mce87gyfbn.cloudfront.net/hero/junkrat/hero-select-portrait.png";
+DPS[7] = "https://d1u1mce87gyfbn.cloudfront.net/hero/widowmaker/hero-select-portrait.png";
+DPS[8] = "https://d1u1mce87gyfbn.cloudfront.net/hero/tracer/hero-select-portrait.png";
+DPS[9] = "https://d1u1mce87gyfbn.cloudfront.net/hero/torbjorn/hero-select-portrait.png";
+DPS[10] = "https://d1u1mce87gyfbn.cloudfront.net/hero/symmetra/hero-select-portrait.png";
+DPS[11] = "https://d1u1mce87gyfbn.cloudfront.net/hero/sombra/hero-select-portrait.png";
+DPS[12] = "https://d1u1mce87gyfbn.cloudfront.net/hero/soldier-76/hero-select-portrait.png";
+DPS[13] = "https://d1u1mce87gyfbn.cloudfront.net/hero/reaper/hero-select-portrait.png";
+DPS[14] = "https://d1u1mce87gyfbn.cloudfront.net/hero/pharah/hero-select-portrait.png";
+DPS[15] = "https://d1u1mce87gyfbn.cloudfront.net/hero/mei/hero-select-portrait.png";
+DPS [16] = "https://d1u1mce87gyfbn.cloudfront.net/hero/mccree/hero-select-portrait.png";
+
+tank[0] = "https://d1u1mce87gyfbn.cloudfront.net/hero/dva/hero-select-portrait.png";
+tank[1] = "https://d1u1mce87gyfbn.cloudfront.net/hero/zarya/hero-select-portrait.png";
+tank[2] = "https://d1u1mce87gyfbn.cloudfront.net/hero/wrecking-ball/hero-select-portrait.png";
+tank[3] = "https://d1u1mce87gyfbn.cloudfront.net/hero/winston/hero-select-portrait.png";
+tank[4] = "https://d1u1mce87gyfbn.cloudfront.net/hero/sigma/hero-select-portrait.png";
+tank[5] = "https://d1u1mce87gyfbn.cloudfront.net/hero/roadhog/hero-select-portrait.png";
+tank[6] = "https://d1u1mce87gyfbn.cloudfront.net/hero/orisa/hero-select-portrait.png";
+tank[7] = "https://d1u1mce87gyfbn.cloudfront.net/hero/reinhardt/hero-select-portrait.png";
+
+support[0] = "https://d1u1mce87gyfbn.cloudfront.net/hero/zenyatta/hero-select-portrait.png";
+support[1] = "https://d1u1mce87gyfbn.cloudfront.net/hero/moira/hero-select-portrait.png";
+support[2] = "https://d1u1mce87gyfbn.cloudfront.net/hero/mercy/hero-select-portrait.png";
+support[3] = "https://d1u1mce87gyfbn.cloudfront.net/hero/ana/hero-select-portrait.png";
+support[4] = "https://d1u1mce87gyfbn.cloudfront.net/hero/baptiste/hero-select-portrait.png";
+support[5] = "https://d1u1mce87gyfbn.cloudfront.net/hero/brigitte/hero-select-portrait.png";
+support[6] = "https://d1u1mce87gyfbn.cloudfront.net/hero/lucio/hero-select-portrait.png";
+
+document.getElementById("result2").innerHTML = "";
+document.getElementById("result3").innerHTML = "";
+document.getElementById("result4").innerHTML = "";
+var subarray = getRandomSubarray(DPS, 2);
+var subarray2 = getRandomSubarray(tank, 2);
+var subarray3 = getRandomSubarray(support, 2);
+for (let i=0; i< 2; i++) {
+
+    document.getElementById("result2").innerHTML += '<img src="'+ subarray2[i] +'" style="width:150px" />';
+    document.getElementById("result3").innerHTML += '<img src="'+ subarray[i] +'" style="width:150px" />';
+    document.getElementById("result4").innerHTML += '<img src="'+ subarray3[i] +'" style="width:150px" />';
+}
+
+}
+
 function getRandomSubarray(arr, size) {
     var shuffled = arr.slice(0), i = arr.length, min = i - size, temp, index;
     while (i-- > min) {
@@ -64,11 +120,17 @@ function getRandomSubarray(arr, size) {
 </script>
 <body>
 <center><h2 style="color:blue"> Nixx's OW Randomizer </h2></center>
-<h4> Click the button to generate and display the Overwatch team: </h4>
+<h4> Click the button to generate and display the Overwatch classic team: </h4>
 <!-- call user-defined getRandomImage function to generate image -->  
-<button onclick = "getRandomImage()"> PRO GAMER TEAM </button>
+<button onclick = "getRandomImage()"> PRO GAMER TEAM BUT CLASSIC </button>
 <br> <br>
 <span id="result" align="center"> </span> 
-  
+<h4> Click the button to generate and display the Overwatch team: </h4>
+<button onclick = "getRandomImage2()"> PRO GAMER TEAM </button>
+<br> <br>
+<span id="result2" align="center"> </span>
+<span id="result3" align="center"> </span>
+<span id="result4" align="center"> </span>
+
 </body>  
 </html>

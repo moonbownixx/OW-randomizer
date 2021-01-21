@@ -44,7 +44,14 @@ var randomImage = new Array();
 //loop to display six randomly chosen images at once
 document.getElementById("result").innerHTML = "";
 for (let i=0; i< 6; i++) {
-    function getRandomSubarray(arr, size) {
+    
+var number= getRandomSubarray(randomImage, randomImage.length);
+
+document.getElementById("result").innerHTML += '<img src="'+ randomImage[number] +'" style="width:150px" />';
+}
+}
+
+function getRandomSubarray(arr, size) {
     var shuffled = arr.slice(0), i = arr.length, min = i - size, temp, index;
     while (i-- > min) {
         index = Math.floor((i + 1) * Math.random());
@@ -54,10 +61,6 @@ for (let i=0; i< 6; i++) {
     }
     return shuffled.slice(min);
 }
-document.getElementById("result").innerHTML += '<img src="'+ randomImage[number] +'" style="width:150px" />';
-}
-}
-
 </script>
 <body>
 <center><h2 style="color:blue"> Nixx's OW Randomizer </h2></center>

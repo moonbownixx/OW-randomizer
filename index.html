@@ -45,7 +45,7 @@ var randomImage = new Array();
 document.getElementById("result").innerHTML = "";
 for (let i=0; i< 6; i++) {
     
-var number= getRandomSubarray(randomImage, randomImage.length);
+var number= getRandomSubarray(randomImage, 6);
 
 document.getElementById("result").innerHTML += '<img src="'+ randomImage[number] +'" style="width:150px" />';
 }
